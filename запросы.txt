@@ -1,0 +1,8 @@
+SELECT * FROM Cafes as c WHERE c.Name = 'cofix' 
+$products = mysqli_query($mysql, "SELECT * FROM Cafes as c WHERE c.Address  = \"".$_POST['Ull']."\" ");
+$search = $_POST['search'];
+        $products = mysqli_query($mysql, "SELECT * FROM Cafes as c WHERE c.Address LIKE '%$search%' ");
+
+        select * from registr
+join Com on registr.id = Com.id_user
+where Com.id_user = '61'
