@@ -8,14 +8,21 @@ echo '
     <title>My App</title>
       <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
       <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    
   </head>
   <body>
     <header>
-    
     </header>';
+
+
+
+
+
+
+
+
+
  echo'
     <div class= "div_aut" style="postion:absolute; left:35%; top: 20%; height: 35%;">
     <form action="http://kurs2/authorization.php" method="post">
@@ -32,8 +39,16 @@ echo '
     echo'
   </body>
   </html>';
+
+
+
+
+
+
   ?>
+  <img src="img/logo.png" alt="альтернативный текст">
 <?php
+
  $login = $_POST['login'];
  $password = md5($_POST['password']);
  $result = mysqli_query($mysql, "SELECT id FROM `registr` WHERE login ='$login' AND password = '$password'");

@@ -13,39 +13,26 @@ if(!empty($_POST)){
     }
 }
 
-$title = "Регистрация";
-$content = "
-<form method=\"POST\">
-    <div>
-        <label>Логин</label>
-        <input type=\"text\" name=\"login\">
-    </div>
-    <div>
-        <label>Пароль</label>
-        <input type=\"password\" name=\"password\">
-    </div>
-    <div>
-    <form action=\"http://kurs2/authorization.php\" method=\"post\">
-        <button type=\"submit\">Регистрация</button>
-        </form>
-    </div>
-</form>";
-
 echo '
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-
-   </form><br>
+<div class= "div_aut" style="postion:absolute; left:35%; top: 20%; height: 35%;">
+<p>Регистрация</p>
+    <form method="post">
+      <label>Придумайте Логин:</label><br>
+      <input type="text" name="login" /><br>
+      <label>Придумайте Пароль:</label><br>
+      <input type="password" name="password" /><br><br>
+   <form action="http://kurs2/authorization.php" method="post">
+    <input class = "button_main"  type="submit" value = "Регистрация"/>
+ </form>
+ </form>
+ <br>
    <form action="http://kurs2/authorization.php" method="post" >
     <input class = "button_main"  type="submit" value = "Назад"/>
-   </form>
+    </form>
     </div>';
     echo'
   </body>
   </html>';
-
 require("rendering.php");
 ?>
 

@@ -7,10 +7,9 @@ $result_login_name = mysqli_query($mysql, "SELECT login FROM `registr` WHERE id=
 $result_role = mysqli_query($mysql, "SELECT role FROM `registr` WHERE id='$id'");
 $Arr = mysqli_fetch_assoc($result_role);
 $roles = $Arr['role'];
-echo $roles;
 echo'
-<div class = "div_history" style= "position: absolute; left: 8%;top:30%; width: 80%; height: 20%; ">
-    <p>Вы авторизовались под логином: ';  
+<div class = "div_history" style= "position: absolute; left: 10%;top:20%; width: 80%; height: 20%; ">
+    <p>Привет ';  
     foreach ($result_login_name as $row) { 
         echo '<td>' . $row["login"] . '</td>';
     }
@@ -28,6 +27,7 @@ echo'
 
 <form action="authorization.php" method="post" >
 <input class = "button_main"  type="submit" value = "Выйти"/>
+<img src="img/logo.png" alt="альтернативный текст">
 </form>
 <style>
     th, td {
@@ -54,19 +54,15 @@ echo'
             <th>Адрес</th>
             <th>Район</th>
         </tr>
-
-        <div style = "position absolute ">
+        <?php
+        
+        if ($roles == '1'){
+        ?>
+        <div class = "map" style= "postion:absolute; left:63.5%; top: 20%; height: 35%;">
         <iframe src="https://www.google.com/maps/d/embed?mid=16Afm8x0mUAAXqpJRTWBN5aA1z3COXpY&ehbc=2E312F" width="640" height="480"></iframe>    
         </div>
         <?php
-
-
-
-
-
-
-
-            
+        }
         
         if ($_POST != Null){
              $result3 = mysqli_query($mysql, "SELECT * FROM Com WHERE id_zav =\"".$_POST['Namezav']."\" and text =\"".$_POST['Otz']."\"");
@@ -79,19 +75,23 @@ echo'
         //$out = mysqli_query($mysql, "SELECT * from registr join Com on registr.id = Com.id_user where Com.id_user = '$id'"); // вывод данных именно этого пользователя
         $out = mysqli_query($mysql, "SELECT * FROM Com ORDER BY 'id'");// Полный вывод всего
         // Имена тех кто оставил комент
+
         while($outs = mysqli_fetch_assoc($out)){
             ?>
-            <div class ="comments">
+
+            <div class ="comments" >
             <div><?= $outs['id']?></div><br>
             <div><?= $outs['text']?></div><br>
             <div><?= $outs['id_zav']?></div><br>
+            
+
             </div>
             <?php
             }
+           
+          
 
-
-
-    $content6 = "
+   /*$content6 = "
         <div>
             <form method=\"POST\">
             <div>
@@ -108,15 +108,36 @@ echo'
                 </div>
                 
             </form>
-            </div>";
+            </div>";*/
+            if ($roles == '1'){
+
+            echo '
+            
+            <div class= "div_aut" style="postion:absolute; left:76%; top: 1%; height: 25%;">
+            <p>Изменение отзыва</p>
+                <form method="post">
+                <label>Ввидите номер комментария</label><br>
+                <input type="text" name="Numcom" /><br>
+                <label>Измените комментарий</label><br>
+                <input type="text" name="Otzizm" /><br><br>
+                <input class = "button_main"  type="submit" value = "Изменить комментарий"/>
+                </form>
+            </div>';
+            echo'
+            </body>
+            </html>';
             if ($_POST != Null){
                 $result4 = mysqli_query($mysql, "UPDATE Com SET text = \"".$_POST['Otzizm']."\" WHERE id = \"".$_POST['Numcom']."\";");
                }
+            }else{
+                ;
+            }           
+           
 
 
 
 
-    $content2 = "
+    /*$content2 = "
     <div>
         <form method=\"POST\">
             <div>
@@ -134,9 +155,39 @@ echo'
             </div>
         
         </form>
-        </div>";
-        
-        $content1 = "
+        </div>";*/
+        echo '
+        <div class= "div_aut" style="postion:absolute; left:50%; top: 1%; height: 25%;">
+        <p>Отзыв</p>
+            <form method="post">
+            <label>Введите тему</label><br>
+            <input type="text" name="Namezav" /><br>
+            <label>Введите текст отзыва</label><br>
+            <input type="text" name="Otz" /><br><br>
+            <input class = "button_main"  type="submit" value = "Ввести"/>
+            </form>
+        </div>';
+        echo'
+        </body>
+        </html>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*$content1 = "
         <form method=\"POST\">
             <div>
                 <label>Название заведения</label>
@@ -153,11 +204,25 @@ echo'
             <div>
                 <button type=\"submit\ \">Поиск</button>
             </div>
-        </form>";
+        </form>";*/
 
-        
-        
-        
+        echo '
+        <div class= "div_aut" style="postion:absolute; left:23.5%; top: 1%; height: 25%;">
+       
+            <form method="post">
+            <label>Название заведения</label><br>
+            <input type="text" name="Nazvanie" /><br>
+            <label>Улица </label><br>
+            <input type="text" name="search" /><br>
+            <label>Район </label><br>
+            <input type="text" name="Rayon" /><br><br>
+            <input class = "button_main"  type="submit" value = "Поиск"/>
+            </form>
+        </div>';
+        echo'
+        </body>
+        </html>';
+
         require("rendering.php");
        
 

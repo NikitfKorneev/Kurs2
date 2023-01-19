@@ -36,6 +36,7 @@ $content = "
     
 </form>";
 
+
 echo '
 <!DOCTYPE html>
 <html lang="ru">
