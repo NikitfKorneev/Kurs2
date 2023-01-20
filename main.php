@@ -29,25 +29,12 @@ echo'
 <input class = "button_main"  type="submit" value = "Выйти"/>
 <img src="img/logo.png" alt="альтернативный текст">
 </form>
-<style>
-    th, td {
-        padding: 10px;
-    }
 
-    th {
-        background: #606060;
-        color: #fff;
-    }
-
-    td {
-        background: #b5b5b5;
-    }
-</style>
 
 
 <body>
-    <table>
-        <tr>
+    <table class = "map" style= "postion:absolute; left:30%; top: -90%; height: 5%;">
+        <tr >
             <th>Название заведения</th>
             <th>Номер телефона</th>
             <th>Количество посадочных мест</th>
@@ -69,22 +56,23 @@ echo'
                 if(mysqli_num_rows($result3) == 0){
                 $test = $_POST['Namezav'];
                 $test1 = $_POST['Otz'];
-                    mysqli_query($mysql, "INSERT INTO Com (id,id_user,text, id_zav) VALUES(Null, '$id', '$test','$test1')");
+                    mysqli_query($mysql, "INSERT INTO Com (id_com,id_user,text, id_zav) VALUES(Null, '$id', '$test','$test1')");
                 }
             }
+
+
+
+
         //$out = mysqli_query($mysql, "SELECT * from registr join Com on registr.id = Com.id_user where Com.id_user = '$id'"); // вывод данных именно этого пользователя
-        $out = mysqli_query($mysql, "SELECT * FROM Com ORDER BY 'id'");// Полный вывод всего
-        // Имена тех кто оставил комент
+        $out = mysqli_query($mysql, "SELECT * FROM Com JOIN registr ON Com.id_user = registr.id ORDER BY 'id'");// Полный вывод всего
 
         while($outs = mysqli_fetch_assoc($out)){
             ?>
-
             <div class ="comments" >
-            <div><?= $outs['id']?></div><br>
-            <div><?= $outs['text']?></div><br>
-            <div><?= $outs['id_zav']?></div><br>
-            
-
+                
+            <div>Автор <?= $outs['login']?></div><br>
+            <div>Тема <?= $outs['id_zav']?></div><br>
+            <div>Отзыв <?= $outs['text']?></div><br>            
             </div>
             <?php
             }
@@ -111,26 +99,11 @@ echo'
             </div>";*/
             if ($roles == '1'){
 
-            echo '
-            
-            <div class= "div_aut" style="postion:absolute; left:76%; top: 1%; height: 25%;">
-            <p>Изменение отзыва</p>
-                <form method="post">
-                <label>Ввидите номер комментария</label><br>
-                <input type="text" name="Numcom" /><br>
-                <label>Измените комментарий</label><br>
-                <input type="text" name="Otzizm" /><br><br>
-                <input class = "button_main"  type="submit" value = "Изменить комментарий"/>
-                </form>
-            </div>';
-            echo'
-            </body>
-            </html>';
-            if ($_POST != Null){
-                $result4 = mysqli_query($mysql, "UPDATE Com SET text = \"".$_POST['Otzizm']."\" WHERE id = \"".$_POST['Numcom']."\";");
-               }
-            }else{
-                ;
+                ?>
+                <form action="http://kurs2/chenge.php" method="post" >
+                    <input class = "button_main"  type="submit" value = "Изменить"/>
+                    </form>
+                <?php
             }           
            
 

@@ -93,6 +93,17 @@
     width: 40%;
     height: 40%; 
   }
+
+
+  .comments{
+  
+    border: 1px solid rgb(39, 39, 39);
+    font-size: 14px;
+    border-radius: 20px;
+    width: 10%;
+    outline: 1px  ; 
+    padding: 4px 30px;
+  }
   .div_history{
     display: inline-block;
     font-size: 20px;
@@ -101,6 +112,30 @@
     width: 4%;
     height: 4%;
   }
+
+.tabl{
+  border: 0;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid #000;
+  border-radius: 20px;    
+  background-color: rgb(247, 247, 247);
+  outline: 0  ;  
+  
+
+  }
+  th, td {
+    padding: 20px;
+}
+
+th {
+    left:63.5%;
+    background: #606060;
+    color: #fff;
+}
+
+td {
+    background: #b5b5b5;
+}
 
 
 input{
