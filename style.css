@@ -54,10 +54,10 @@
     -moz-transition-duration: .2s;
     background-color:rgb(39, 39, 39);
     padding: 4px 30px;
-  }
+}
   
  
-  .table_main{
+.table_main{
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-family: Nunito;
@@ -70,9 +70,9 @@
     background-color:rgb(39, 39, 39);
     padding: 4px 30px;
     border-color: white;
-  }
+}
 
-  .div_main{
+.div_main{
     color: rgb(39, 39, 39);
     font-size: 20px;
     font-family: Nunito;
@@ -86,32 +86,30 @@
     padding: 4px 30px;
     border-color: rgb(39, 39, 39);
     width: 30%;
-  }
+}
 
-  .map{
+.map{
     position: relative;
-    width: 40%;
-    height: 40%; 
-  }
-
-
-  .comments{
-  
+    width: 50%;
+    height: 10%; 
+}
+.comments{
+  position: relative;
     border: 1px solid rgb(39, 39, 39);
     font-size: 14px;
     border-radius: 20px;
     width: 10%;
-    outline: 1px  ; 
     padding: 4px 30px;
-  }
-  .div_history{
+}
+
+.div_history{
     display: inline-block;
     font-size: 20px;
     border: 0px solid rgb(39, 39, 39);
     border-radius: 20px;
     width: 4%;
     height: 4%;
-  }
+}
 
 .tabl{
   border: 0;
@@ -120,29 +118,28 @@
   border-radius: 20px;    
   background-color: rgb(247, 247, 247);
   outline: 0  ;  
-  
-
-  }
+}
   th, td {
     padding: 20px;
 }
 
 th {
     left:63.5%;
-    background: #606060;
+    background: #3922bd;
     color: #fff;
 }
 
 td {
-    background: #b5b5b5;
+  font-size: 19px;
+  color: #fff;
+    background: #884cee;
 }
-
 
 input{
     border: 0;
     color: rgb(0, 0, 0);
     border-bottom: 2px solid #000;
-    border-radius: 20px;    
+    border-radius: 10px;    
     background-color: rgb(247, 247, 247);
     outline: 0  ;  
   }
@@ -155,7 +152,7 @@ input{
     font-family: Nunito;
     text-decoration: none;
     border: 1px solid rgb(39, 39, 39);
-    border-radius: 20px;
+    border-radius: 25px;
     transition-duration: .2s;
     -webkit-transition-duration: .2s;
     -moz-transition-duration: .2s;
@@ -169,6 +166,13 @@ input{
   body {
     font-family: Nunito;
     box-sizing: border-box;
-    background: -webkit-linear-gradient(90deg, #3922bd,#2170d8);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(90deg, #b6a3d3,#6a14ff);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
+    background: -webkit-linear-gradient(90deg, #3922bd,#2170d8);                          background: linear-gradient(90deg, #b6a3d3,#6a14ff);                          
   }
-  
+  footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding: px;
+    background-color: #45a1ff;
+    color: #fff;
+}

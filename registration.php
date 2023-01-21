@@ -1,6 +1,7 @@
 <?php
 require("db.php");
 if(!empty($_POST)){
+  if($_POST['login'] != ''){
     $result = mysqli_query($mysql, "SELECT * FROM registr WHERE login =\"".$_POST['login']."\"");
     if(mysqli_num_rows($result) == 0){
         mysqli_query($mysql, "INSERT INTO registr (login, password, role) VALUES (
@@ -9,6 +10,7 @@ if(!empty($_POST)){
             \"2\" 
             )"
         );
+      }
         $_SESSION["user"] = $_POST["login"];
     }
 }
@@ -21,12 +23,13 @@ echo '
       <input type="text" name="login" /><br>
       <label>Придумайте Пароль:</label><br>
       <input type="password" name="password" /><br><br>
-   <form action="http://kurs2/authorization.php" method="post">
+   <form action="authorization.php" method="post">
     <input class = "button_main"  type="submit" value = "Регистрация"/>
  </form>
+
  </form>
  <br>
-   <form action="http://kurs2/authorization.php" method="post" >
+   <form action="authorization.php" method="post" >
     <input class = "button_main"  type="submit" value = "Назад"/>
     </form>
     </div>';
@@ -35,6 +38,10 @@ echo '
   </html>';
 require("rendering.php");
 ?>
+  <marquee  behavior="alternate" direction="left">
+  <img src="img/logo.png" alt="альтернативный текст">
+  </marquee>
+  <?php
 
 
 

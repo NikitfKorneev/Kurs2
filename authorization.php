@@ -5,7 +5,7 @@ echo '
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>My App</title>
+    <title>Вкусно кушать</title>
       <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
       <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="style.css">
@@ -25,14 +25,14 @@ echo '
 
  echo'
     <div class= "div_aut" style="postion:absolute; left:35%; top: 20%; height: 35%;">
-    <form action="http://kurs2/authorization.php" method="post">
+    <form action="authorization.php" method="post">
       <label>Логин:</label><br>
       <input type="text" name="login" /><br>
       <label>Пароль:</label><br>
       <input type="password" name="password" /><br><br>
       <input class = "button_main"  type="submit" value = " Отправить  "/>
    </form><br>
-   <form action="http://kurs2/registration.php" method="post">
+   <form action="registration.php" method="post">
     <input class = "button_main"  type="submit" value = "Регистрация"/>
  </form>
     </div>';
@@ -44,10 +44,11 @@ echo '
 
 
 
-
   ?>
+  <marquee  behavior="alternate" direction="left">
   <img src="img/logo.png" alt="альтернативный текст">
-<?php
+  </marquee>
+  <?php
 
  $login = $_POST['login'];
  $password = md5($_POST['password']);
