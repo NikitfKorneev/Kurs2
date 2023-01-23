@@ -28,9 +28,13 @@ echo'
     <title>Products</title>
 </head>
 
-<form action="authorization.php" method="post" style= "position: absolute; left: 3%;top:9%; width: 0%; height: 20%;" >
+<form action="authorization.php" method="post" style= "position: absolute; left: 2%;top:9%; width: 0%; height: 20%;" >
 <input class = "button_main"  type="submit" value = "Выйти из аккаунта"/>
 </form>
+<form action="comments.php" method="post" style= "position: absolute; left: 2%;top:19%; width: 0%; height: 20%;" >
+<input class = "button_main"  type="submit" value = "Карта"/>
+</form>
+
 <?php
 
 
@@ -38,7 +42,7 @@ echo'
 if ($roles == '1'){
 
 ?>
-<form action="chenge.php" method="post" style= "position: absolute; left: 3%;top:14%; width: 0%; height: 20%;" >
+<form action="chenge.php" method="post" style= "position: absolute; left: 2%;top:14%; width: 0%; height: 20%;" >
     <input class = "button_main"  type="submit" value = "Изменить комментарии"/>
     </form>
 <?php
@@ -55,7 +59,7 @@ if ($roles == '1'){
 
 
 <body>
-    <table class = "map" style= "position:absolute; left:23%; top: 30%; height: 5%;">
+    <table class = "map" style= "position:absolute; left:20%; top: 30%; height: 5%;">
         <tr >
             <th>Название заведения</th>
             <th>Номер телефона</th>
@@ -74,12 +78,16 @@ if ($roles == '1'){
         }
         
         if ($_POST != Null){
+            if($_POST['Otz'] != '' && $_POST['Namezav'] != ''){
              $result3 = mysqli_query($mysql, "SELECT * FROM Com WHERE id_zav =\"".$_POST['Otz']."\" and text =\"".$_POST['Namezav']."\"");
                 if(mysqli_num_rows($result3) == 0){
                 $test = $_POST['Namezav'];
                 $test1 = $_POST['Otz'];
                     mysqli_query($mysql, "INSERT INTO Com (id_com,id_user,text, id_zav) VALUES(Null, '$id', '$test','$test1')");
                 }
+            }else{
+                echo'Заполните все строки';
+            }
             }
 
 
@@ -91,7 +99,7 @@ if ($roles == '1'){
 
         while($outs = mysqli_fetch_assoc($out)){
             ?>
-            <div class = "comments" style=  "left:3%; top: 20%; height: 15%;"><br>
+            <div class = "comments" style=  "left:3%; top: 30%; height: 15%;"><br>
             <div >Автор <?= $outs['login']?></div><br>
             <div >Тема <?= $outs['id_zav']?></div><br>
             <div >Отзыв <?= $outs['text']?></div><br>        
@@ -147,12 +155,12 @@ if ($roles == '1'){
         </div>";*/
         echo '
         <div class= "div_aut" style="postion:absolute; left:50%; top: 1%; height: 25%;">
-        <p>Отзыв</p>
+        <a>Отзыв</a>
             <form method="post">
             <label>Введите тему</label><br>
             <input type="text" name="Otz" /><br>
             <label>Введите текст отзыва</label><br>
-            <input type="text" name="Namezav" /><br><br>
+            <textarea type="text" name="Namezav"></textarea><br><br>
             <input class = "button_main"  type="submit" value = "Ввести"/>
             </form>
         </div>';
@@ -196,8 +204,8 @@ if ($roles == '1'){
         </form>";*/
 
         echo '
-        <div class= "div_aut" style="postion:absolute; left:23.5%; top: 1%; height: 25%;">
-       
+        <div class= "div_aut" style="postion:absolute; left:20%; top: 1%; height: 25%;">
+        <a>Поиск заведения</a>
             <form method="post">
             <label>Название заведения</label><br>
             <input type="text" name="Nazvanie" /><br>

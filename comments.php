@@ -1,19 +1,23 @@
 <?php
-require("db.php");
-
-$id = $_GET['id'];
-$sql = "SELECT * FROM `registr` WHERE id = '$id'";
-$result_login_name = mysqli_query($mysql, "SELECT login FROM `registr` WHERE id='$id'");
-
-
-
-echo'
-<div class = "div_history" style= "position: absolute; left: 8%;top:30%; width: 80%; height: 20%; ">
-    <p>Вы авторизовались под логином: ';  
-    foreach ($result_login_name as $row) { //id_user, first_name, second_name, surname, role, login, password`
-        echo '<td>' . $row["login"] . '</td>';
-    }
-    echo'
+    include "db.php";
+echo '
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Вкусно кушать</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+      <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+    </header>';
+    ?>
+<div class = "map" style= "position:fixed; left:0%; top: 0%; height: 35%;">
+<iframe src="https://www.google.com/maps/d/embed?mid=16Afm8x0mUAAXqpJRTWBN5aA1z3COXpY&ehbc=2E312F" width="1920" height="1080"></iframe>    
 </div>
-';
-?>
+<?php
+
+ ?>

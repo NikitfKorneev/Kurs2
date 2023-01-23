@@ -40,13 +40,13 @@ echo '
   </body>
   </html>';
 
-
+н
 
 
 
   ?>
   <marquee  behavior="alternate" direction="left">
-  <img src="img/logo.png" alt="альтернативный текст">
+  <img src="img/logo.png" alt="альтеративный текст">
   </marquee>
   <?php
   
@@ -57,7 +57,8 @@ echo '
 ?>
 
 <?php  $login['id'];
-    $id = $login['id'];?>
+    $id = $login['id'];
+?>
 <?php
 Header("Location:main.php?id=$id");
 ?>

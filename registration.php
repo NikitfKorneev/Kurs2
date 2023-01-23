@@ -1,15 +1,10 @@
 <?php
 require("db.php");
 if(!empty($_POST)){
-  if($_POST['login'] != ''){
+  if($_POST['login'] != '' && $_POST['password'] != ''){
     $result = mysqli_query($mysql, "SELECT * FROM registr WHERE login =\"".$_POST['login']."\"");
     if(mysqli_num_rows($result) == 0){
-        mysqli_query($mysql, "INSERT INTO registr (login, password, role) VALUES (
-            \"".$_POST["login"]."\",
-            \"".md5($_POST["password"])."\",
-            \"2\" 
-            )"
-        );
+        mysqli_query($mysql, "INSERT INTO registr (login, password, role) VALUES (\"".$_POST["login"]."\",\"".md5($_POST["password"])."\",\"2\" )");
       }
         $_SESSION["user"] = $_POST["login"];
     }
