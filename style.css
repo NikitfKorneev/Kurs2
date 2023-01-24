@@ -14,33 +14,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
-.text_up_fio {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  font-family: Nunito;
-  text-decoration: none;
-  border: 2px solid rgb(39, 39, 39);
-  border-radius: 20px;
-  transition-duration: .2s;
-  -webkit-transition-duration: .2s;
-  -moz-transition-duration: .2s;
-  background-color:rgb(39, 39, 39);
-  padding: 4px 30px;
-}
-
-.text_footer {
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  text-align: center;
-  font-family: Nunito;
-  text-decoration: none;
-  border: 2px solid rgb(39, 39, 39);
-  transition-duration: .2s;
-  -webkit-transition-duration: .2s;
-  -moz-transition-duration: .2s;
-  background-color:rgb(39, 39, 39);
-  padding: 4px 30px;
-}
 
 .button_main {
     color: rgb(255, 255, 255);
@@ -54,38 +27,6 @@
     -moz-transition-duration: .2s;
     background-color:rgb(39, 39, 39);
     padding: 4px 30px;
-}
-  
- 
-.table_main{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-family: Nunito;
-    text-decoration: none;
-    border: 0px solid rgb(39, 39, 39);
-    border-radius: 20px;
-    transition-duration: .2s;
-    -webkit-transition-duration: .2s;
-    -moz-transition-duration: .2s;
-    background-color:rgb(39, 39, 39);
-    padding: 4px 30px;
-    border-color: white;
-}
-
-.div_main{
-    color: rgb(39, 39, 39);
-    font-size: 20px;
-    font-family: Nunito;
-    text-decoration: none;
-    border: 2px solid rgb(39, 39, 39);
-    border-radius: 20px;
-    transition-duration: .2s;
-    -webkit-transition-duration: .2s;
-    -moz-transition-duration: .2s;
-    background-color:rgb(255, 255, 255);
-    padding: 4px 30px;
-    border-color: rgb(39, 39, 39);
-    width: 30%;
 }
 
 .map{
@@ -102,7 +43,7 @@
     padding: 4px 30px;
 }
 
-.div_history{
+.div{
     display: inline-block;
     font-size: 20px;
     border: 0px solid rgb(39, 39, 39);
@@ -168,11 +109,3 @@ input{
     box-sizing: border-box;
     background: -webkit-linear-gradient(90deg, #3922bd,#2170d8);                          background: linear-gradient(90deg, #b6a3d3,#6a14ff);                          
   }
-  footer {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    padding: px;
-    background-color: #45a1ff;
-    color: #fff;
-}

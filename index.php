@@ -15,14 +15,6 @@ echo '
     <header>
     </header>';
 
-
-
-
-
-
-
-
-
  echo'
     <div class= "div_aut" style="postion:absolute; left:35%; top: 20%; height: 35%;">
     <form action="authorization.php" method="post">
@@ -39,10 +31,6 @@ echo '
     echo'
   </body>
   </html>';
-
-н
-
-
 
   ?>
   <marquee  behavior="alternate" direction="left">

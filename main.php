@@ -7,7 +7,7 @@ $result_role = mysqli_query($mysql, "SELECT role FROM `registr` WHERE id='$id'")
 $Arr = mysqli_fetch_assoc($result_role);
 $roles = $Arr['role'];
 echo'
-<div class = "div_history" style= "position: absolute; left: 3%;top:0%; width: 20%; height: 20%; ">
+<div class = "div" style= "position: absolute; left: 3%;top:0%; width: 20%; height: 20%; ">
     <p>Вы зашли под логином ';  
     foreach ($result_login_name as $row) { 
         echo '<td>' . $row["login"] . '</td><br>';
@@ -25,7 +25,7 @@ echo'
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Products</title>
+    <title>Вкусно кушать</title>
 </head>
 
 <form action="authorization.php" method="post" style= "position: absolute; left: 2%;top:9%; width: 0%; height: 20%;" >
@@ -33,6 +33,9 @@ echo'
 </form>
 <form action="comments.php" method="post" style= "position: absolute; left: 2%;top:19%; width: 0%; height: 20%;" >
 <input class = "button_main"  type="submit" value = "Карта"/>
+</form>
+<form action="comments.php" method="post" style= "position: absolute; left: 95%;top:5%; width: 0%; height: 20%;" >
+<a href = "https://data.mos.ru/opendata/7710881420-obshchestvennoe-pitanie-v-moskve">Открытые данные Москвы</a>
 </form>
 
 <?php
