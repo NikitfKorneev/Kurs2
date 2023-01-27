@@ -7,8 +7,10 @@ $result_role = mysqli_query($mysql, "SELECT role FROM `registr` WHERE id='$id'")
 $Arr = mysqli_fetch_assoc($result_role);
 $roles = $Arr['role'];
 echo'
+
 <div class = "div" style= "position: absolute; left: 3%;top:0%; width: 20%; height: 20%; ">
     <p>Вы зашли под логином ';  
+    
     foreach ($result_login_name as $row) { 
         echo '<td>' . $row["login"] . '</td><br>';
     }
@@ -17,6 +19,11 @@ echo'
         Ваша роль Админ';
     }
     echo'
+</div>
+<div class = "div" style= "position: absolute; left: 74%;top:0%; width: 20%; height: 20%; ">
+<header>
+    <h1> Главная страница</h1>
+    </header>
 </div>
 ';
 ?>
@@ -55,7 +62,7 @@ if ($roles == '1'){
 
 
 ?>
-<form action="authorization.php" method="post" style= "position: absolute; left: 83%;top:3%; width: 0%; height: 20%;" >
+<form action="authorization.php" method="post" style= "position: absolute; left: 83%;top:10%; width: 0%; height: 20%;" >
 <object type="image/svg+xml" src="logo.svg" data="logo.svg" alt="альтернативный текст">
 </object>
 </form>
@@ -86,10 +93,10 @@ if ($roles == '1'){
                 if(mysqli_num_rows($result3) == 0){
                 $test = $_POST['Namezav'];
                 $test1 = $_POST['Otz'];
-                    mysqli_query($mysql, "INSERT INTO Com (id_com,id_user,text, id_zav) VALUES(Null, '$id', '$test','$test1')");
+                    mysqli_query($mysql, "INSERT INTO Com (id_com,id_user,text,id_zav) VALUES(Null, '$id', '$test','$test1')");
                 }
             }else{
-                echo'Заполните все строки';
+                echo'';
             }
             }
 
@@ -111,51 +118,6 @@ if ($roles == '1'){
             <?php
             }
 
-    
-
-   /*$content6 = "
-        <div>
-            <form method=\"POST\">
-            <div>
-                <label>Ввидите номер комментария</label>
-                <input type=\"text\" name=\"Numcom\">
-            </div>
-
-            <div>
-                <label>Измените комментарий </label>
-                <input type=\"text\" name=\"Otzizm\">
-            </div>
-                <div>
-                    <button type=\"submit\ name=\"my1\" \">Изменить комментарий </button>
-                </div>
-                
-            </form>
-            </div>";*/
-                   
-           
-
-
-
-
-    /*$content2 = "
-    <div>
-        <form method=\"POST\">
-            <div>
-                <label>Отзыв</label>
-                <input type=\"text\" name=\"Namezav\">
-            </div>
-
-            <div>
-                <label>Текст</label>
-                <input type=\"text\" name=\"Otz\">
-            </div>
-
-            <div>
-                <button type=\"submit\ name=\"my\" \">Ввести</button>
-            </div>
-        
-        </form>
-        </div>";*/
         echo '
         <div class= "div_aut" style="postion:absolute; left:50%; top: 1%; height: 25%;">
         <a>Отзыв</a>
@@ -172,39 +134,6 @@ if ($roles == '1'){
         </html>';
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*$content1 = "
-        <form method=\"POST\">
-            <div>
-                <label>Название заведения</label>
-                <input type=\"text\" name=\"Nazvanie\">
-            </div>
-            <div>
-                <label>Улица</label>
-                <input type=\"text\" class=\"search\" name=\"search\">
-            </div>
-            <div>
-                <label>Район</label>
-                <input type=\"text\" name=\"Rayon\">
-            </div>
-            <div>
-                <button type=\"submit\ \">Поиск</button>
-            </div>
-        </form>";*/
 
         echo '
         <div class= "div_aut" style="postion:absolute; left:20%; top: 1%; height: 25%;">
@@ -227,11 +156,6 @@ if ($roles == '1'){
        
 
 
-
-
-      
-      
-        
         if ( $_POST['Nazvanie'] <> NULL && $_POST ['Rayon'] <> NULL && $_POST['search'] ){
             $search = $_POST['search'];
             $search1 = $_POST['Nazvanie'];
@@ -262,27 +186,6 @@ if ($roles == '1'){
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
             $products = mysqli_fetch_all($products);
             foreach ($products as $product) {
                 ?>

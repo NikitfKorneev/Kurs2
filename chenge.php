@@ -12,8 +12,9 @@ echo '
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   </head>
   <body>
-    <header>
-    </header>';
+  <header>
+  <h1>Админ панель</h1>
+  </header>';
     ?>
     <form method="post">
     <label>Введите id комментария</label><br>
@@ -32,7 +33,7 @@ echo '
 </div>
 <?php
 
-  $out = mysqli_query($mysql, "SELECT * FROM Com JOIN registr ON Com.id_user = registr.id ORDER BY 'id'");// Полный вывод всего
+  $out = mysqli_query($mysql, "SELECT * FROM Com JOIN registr ON Com.id_user = registr.id ORDER BY 'id'");
   while($outs = mysqli_fetch_assoc($out)){
       ?>
       <div class ="comments" style= " left:0%; top: 10%; height: 35%;" >
@@ -46,13 +47,5 @@ echo '
       if ($_POST != Null){
         $result4 = mysqli_query($mysql, "UPDATE Com SET text = \"".$_POST['text']."\" WHERE id_com = \"".$_POST['id_zav']."\";");
         }
-
-
-
-
-
-/*?>
-  <img src="img/logo.png" alt="альтернативный текст">
-<?php*/
 
  ?>

@@ -10,8 +10,16 @@ if(!empty($_POST)){
     }
 }
 
+
+
 echo '
-<div class= "div_aut" style="postion:absolute; left:35%; top: 20%; height: 35%;">
+<div class = "div" style= "position: absolute; left: 40%;top:0%; width: 20%; height: 20%; ">
+  <header>
+      <h1> Регистрация</h1>
+      </header>
+  </div>
+
+<div class= "div_aut" style="postion:absolute; left:35%; top: 25%; height: 35%;">
 <p>Регистрация</p>
     <form method="post">
       <label>Придумайте Логин:</label><br>
@@ -20,8 +28,7 @@ echo '
       <input type="password" name="password" /><br><br>
    <form action="authorization.php" method="post">
     <input class = "button_main"  type="submit" value = "Регистрация"/>
- </form>
-
+   </form>
  </form>
  <br>
    <form action="authorization.php" method="post" >

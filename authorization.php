@@ -12,8 +12,11 @@ echo '
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   </head>
   <body>
-    <header>
-    </header>';
+  <div class = "div" style= "position: absolute; left: 40%;top:0%; width: 20%; height: 20%; ">
+  <header>
+      <h1> Авторизация</h1>
+      </header>
+  </div>';
 
 
 
@@ -24,7 +27,7 @@ echo '
 
 
  echo'
-    <div class= "div_aut" style="postion:absolute; left:35%; top: 20%; height: 35%;">
+    <div class= "div_aut" style="postion:absolute; left:35%; top: 30%; height: 35%;">
     <form action="authorization.php" method="post">
       <label>Логин:</label><br>
       <input type="text" name="login" /><br>
