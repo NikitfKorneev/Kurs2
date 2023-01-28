@@ -11,20 +11,22 @@ echo '
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   </head>
-  <body>
   <div class = "div" style= "position: absolute; left: 40%;top:0%; width: 20%; height: 20%; ">
-  <header>
-      <h1> Авторизация</h1>
-      </header>
-  </div>';
+  <h1>Вкусно кушать</h1>
+  </div>
+  <div class = "div" style= "position: absolute; left: 42%;top:7%; width: 20%; height: 20%; ">  
+<header>
+    <h2>Авторизация</h2>
+</header>
+</div>';
 
  echo'
     <div class= "div_aut" style="postion:absolute; left:35%; top: 30%; height: 35%;">
     <form action="authorization.php" method="post">
-      <label>Логин:</label><br>
-      <input type="text" name="login" /><br>
-      <label>Пароль:</label><br>
-      <input type="password" name="password" /><br><br>
+      <label>Логин:</label><br><br>
+      <input type="text" name="login" class= "div_text" /><br><br><br>
+      <label>Пароль:</label><br><br>
+      <input type="password" name="password" class= "div_text" /><br><br><br>
       <input class = "button_main"  type="submit" value = " Отправить  "/>
    </form><br>
    <form action="registration.php" method="post">
@@ -36,7 +38,7 @@ echo '
   </html>';
 
   ?>
-  <marquee  behavior="alternate" direction="left">
+    <marquee  behavior="alternate" direction="left"  class = "div" style= "position: absolute; left: 35%;top:65%; width: 25%; height: 20%;" >
   <img src="img/logo.png" alt="альтеративный текст">
   </marquee>
   <?php

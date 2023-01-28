@@ -14,23 +14,26 @@ if(!empty($_POST)){
 
 echo '
 <div class = "div" style= "position: absolute; left: 40%;top:0%; width: 20%; height: 20%; ">
-  <header>
-      <h1> Регистрация</h1>
-      </header>
-  </div>
+<h1>Вкусно кушать</h1>
+</div>
+<div class = "div" style= "position: absolute; left: 42%;top:7%; width: 20%; height: 20%; ">  
+<header>
+      <h2>Регистрация</h2>
+  </header>
+</div>
 
-<div class= "div_aut" style="postion:absolute; left:35%; top: 25%; height: 35%;">
-<p>Регистрация</p>
+
+<div class= "div_aut" style="postion:absolute; left:35%; top: 30%; height: 35%;">
     <form method="post">
-      <label>Придумайте Логин:</label><br>
-      <input type="text" name="login" /><br>
-      <label>Придумайте Пароль:</label><br>
-      <input type="password" name="password" /><br><br>
+      <label>Придумайте Логин:</label><br><br>
+      <input type="text" name="login"  class= "div_text1" /><br><br><br>
+      <label>Придумайте Пароль:</label><br><br>
+      <input type="password" name="password" class= "div_text1" /><br><br><br>
    <form action="authorization.php" method="post">
     <input class = "button_main"  type="submit" value = "Регистрация"/>
    </form>
  </form>
- <br>
+
    <form action="authorization.php" method="post" >
     <input class = "button_main"  type="submit" value = "Назад"/>
     </form>
@@ -40,7 +43,7 @@ echo '
   </html>';
 require("rendering.php");
 ?>
-  <marquee  behavior="alternate" direction="left">
+  <marquee  behavior="alternate" direction="left"  class = "div" style= "position: absolute; left: 35%;top:70%; width: 25%; height: 20%;" >
   <img src="img/logo.png" alt="альтернативный текст">
   </marquee>
   <?php

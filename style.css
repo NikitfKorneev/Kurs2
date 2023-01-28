@@ -9,10 +9,6 @@
 @import "http://fonts.fontstorage.com/import/ubuntu.css";
 @import "http://fonts.fontstorage.com/import/casper.css";
 @import "http://fonts.fontstorage.com/import/cousine.css";
-@import url('https://fonts.googleapis.com/css?family=Itim');
-@import url('https://fonts.googleapis.com/css?family=Devonshire');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
 
 .button_main {
@@ -37,7 +33,7 @@
 .comments{
   position: relative;
     border: 1px solid rgb(39, 39, 39);
-    font-size: 14px;
+    font-size: 20px;
     border-radius: 20px;
     width: 10%;
     padding: 4px 30px;
@@ -89,7 +85,7 @@ input{
     font-family: Nunito;
     text-align: center;
     color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 25px;
     font-family: Nunito;
     text-decoration: none;
     border: 1px solid rgb(39, 39, 39);
@@ -104,7 +100,95 @@ input{
     height: 40%;
   }
 
-  body {
+
+  .div_text{
+    position: absolute;
+    font-family: Nunito;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: Nunito;
+    text-decoration: none;
+    border: 1px solid rgb(39, 39, 39);
+    border-radius: 25px;
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    background: -webkit-linear-gradient(90deg, #3922bd,#2170d8);                        background: linear-gradient(90deg, #9c73e1,#884cee);
+    padding: 4px 30px;
+    border-color: rgb(39, 39, 39);
+    width: 20%;
+    height: 10%;
+    left: 33%;
+  }
+
+
+    .div_text1{
+      position: absolute;
+      font-family: Nunito;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-size: 25px;
+      font-family: Nunito;
+      text-decoration: none;
+      border: 1px solid rgb(39, 39, 39);
+      border-radius: 25px;
+      transition-duration: .2s;
+      -webkit-transition-duration: .2s;
+      -moz-transition-duration: .2s;
+      background: -webkit-linear-gradient(90deg, #3922bd,#2170d8);                        background: linear-gradient(90deg, #9c73e1,#884cee);
+      padding: 4px 30px;
+      border-color: rgb(39, 39, 39);
+      width: 32%;
+      height: 13%;
+      left: 33%;
+      
+  }  
+  .div_text2{
+    position: absolute;
+    font-family: Nunito;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: Nunito;
+    text-decoration: none;
+    border: 1px solid rgb(39, 39, 39);
+    border-radius: 25px;
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    background: -webkit-linear-gradient(90deg, #3922bd,#2170d8);                        background: linear-gradient(90deg, #9c73e1,#884cee);
+    padding: 4px 30px;
+    border-color: rgb(39, 39, 39);
+    width: 80%;
+    height: 13%;
+    left: 10%;
+    
+}   
+.div_text3{
+  position: absolute;
+  font-family: Nunito;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: Nunito;
+  text-decoration: none;
+  border: 1px solid rgb(39, 39, 39);
+  border-radius: 25px;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  background: -webkit-linear-gradient(90deg, #3922bd,#2170d8);                        background: linear-gradient(90deg, #9c73e1,#884cee);
+  padding: 4px 30px;
+  border-color: rgb(39, 39, 39);
+  width: 80%;
+  height: 30%;
+  left: 10%;
+  
+}
+
+
+    body {
     font-family: Nunito;
     box-sizing: border-box;
     background: -webkit-linear-gradient(90deg, #3922bd,#2170d8);                          background: linear-gradient(90deg, #b6a3d3,#6a14ff);                          
